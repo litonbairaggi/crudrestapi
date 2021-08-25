@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 from . models import TeacherDetail
+
 # Register your models here.
 
 @admin.register(TeacherDetail)
