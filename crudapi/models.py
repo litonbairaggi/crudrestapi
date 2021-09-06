@@ -15,5 +15,13 @@ class TeacherDetail(models.Model):
 
     def __str__(self):
         return self.name
-    
 
+class Qualification(models.Model):
+    teacher = models.ForeignKey(TeacherDetail, on_delete=models.CASCADE, related_name='qualifications', blank=False)
+    ssc = models.DateField(null=True)
+    hsc = models.DateField(null=True)
+    honours = models.DateField(null=True)
+    master = models.DateField(null=True)
+    extra = models.CharField(max_length=128, blank=True)
+    created_date = models.DateTimeField(default=now)
+    
