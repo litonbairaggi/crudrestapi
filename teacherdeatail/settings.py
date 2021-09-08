@@ -47,8 +47,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',      #cors
-    'django.middleware.common.CommonMiddleware',  #cors
+    # CORS
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -86,7 +87,7 @@ WSGI_APPLICATION = 'teacherdeatail.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'teacherdeatai',
+        'NAME': 'teacher_api',
         'USER': 'root',
         'PASSWORD': '12345678',
         'HOST': '127.0.0.1',

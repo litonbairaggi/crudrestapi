@@ -11,17 +11,17 @@ class TeacherDetail(models.Model):
     experience = models.CharField(max_length=256, blank=True)
     address = models.CharField(max_length=128, blank=True)
     linkedin = models.CharField(max_length=64, unique=True, blank=True)
-    created_date = models.DateTimeField(default=now)
+    # created_date = models.DateTimeField(default=now)
 
-    def __str__(self):
-        return self.name
+    def __unicode__(self):
+        return self.name        
 
 class Qualification(models.Model):
-    teacher = models.ForeignKey(TeacherDetail, on_delete=models.CASCADE, related_name='qualifications', blank=False)
+    teacher = models.ForeignKey(TeacherDetail, on_delete=models.CASCADE, related_name='teacher_qualifications', blank=True)
     ssc = models.DateField(null=True)
     hsc = models.DateField(null=True)
     honours = models.DateField(null=True)
     master = models.DateField(null=True)
     extra = models.CharField(max_length=128, blank=True)
-    created_date = models.DateTimeField(default=now)
+    # created_date = models.DateTimeField(default=now)
     

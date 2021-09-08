@@ -10,5 +10,3 @@ class TeacherDetailAdmin(admin.ModelAdmin):
 @admin.register(Qualification)
 class QualificationAdmin(admin.ModelAdmin):
     list_display = ['teacher', 'ssc', 'hsc', 'honours', 'master', 'extra']
-     
-    
